@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ServiceTech
+namespace GrialRTLService
 {
 	public class Constant
 	{
