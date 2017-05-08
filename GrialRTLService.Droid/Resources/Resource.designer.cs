@@ -1811,7 +1811,6 @@ namespace GrialRTLService.Droid
 			global::UXDivers.Effects.Droid.Resource.Styleable.ViewStubCompat_android_id = global::GrialRTLService.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::UXDivers.Effects.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::GrialRTLService.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::UXDivers.Effects.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::GrialRTLService.Droid.Resource.Styleable.ViewStubCompat_android_layout;
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::GrialRTLService.Droid.Resource.Attribute.actionBarSize;
 			global::Lottie.Forms.Droid.Resource.Animation.abc_fade_in = global::GrialRTLService.Droid.Resource.Animation.abc_fade_in;
 			global::Lottie.Forms.Droid.Resource.Animation.abc_fade_out = global::GrialRTLService.Droid.Resource.Animation.abc_fade_out;
 			global::Lottie.Forms.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::GrialRTLService.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -3606,6 +3605,7 @@ namespace GrialRTLService.Droid
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_id = global::GrialRTLService.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::GrialRTLService.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::GrialRTLService.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::GrialRTLService.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
