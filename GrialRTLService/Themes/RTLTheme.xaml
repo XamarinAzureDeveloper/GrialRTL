@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:GrialRTLService;assembly=GrialRTLService" 
+	x:Class="GrialRTLService.RTLTheme">
+
+	<x:Boolean x:Key="Rtl">True</x:Boolean>
+
+	<Style TargetType="Label">
+		<Setter Property="HorizontalTextAlignment" Value="End" />
+		<Setter Property="HorizontalOptions" Value="EndAndExpand" />
+	</Style>
+	
+	<Style x:Key="LabelRTLOrLFTStyle" TargetType="Label">
+		<Setter Property="HorizontalTextAlignment" Value="End" />
+		<Setter Property="HorizontalOptions" Value="EndAndExpand" />
+	</Style>
+
+	<Style x:Key="ValidationEntryErrorStyle" TargetType="Label">
+		<Setter Property="BackgroundColor" Value="{ DynamicResource ErrorColor }" />
+		<Setter Property="TextColor" Value="White" />
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="HorizontalTextAlignment" Value="End" />
+		<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+	</Style>
+	
+
+	<Style x:Key="EntryRTLOrLFTStyle" TargetType="Entry">
+		<Setter Property="HorizontalTextAlignment" Value="End" />
+	</Style>
+
+	<Style x:Key="DatePickerRTLOrLFTStyle" TargetType="DatePicker">
+		<Setter Property="HorizontalOptions" Value="EndAndExpand" />
+	</Style>
+
+	<Style x:Key="TimePickerRTLOrLFTStyle" TargetType="TimePicker">
+		<Setter Property="HorizontalOptions" Value="EndAndExpand" />
+	</Style>
+
+	<Style x:Key="PickerRTLOrLFTStyle" TargetType="Picker">
+		<Setter Property="HorizontalOptions" Value="EndAndExpand" />
+	</Style>
+
+
+	<Style x:Key="ListViewRTLOrLFTStyle" TargetType="ListView">
+		<Setter Property="HorizontalOptions" Value="EndAndExpand" />
+	</Style>
+
+	<Style x:Key="EditorRTLOrLFTStyle" TargetType="Editor">
+		<!--<Setter Property="HorizontalOptions" Value="EndAndExpand" />-->
+	</Style>
+
+	<Style x:Key="MainMenuRTLChevronStyle" TargetType="Label" BasedOn="{ StaticResource FontIconBase }">
+		<Setter Property="Text" Value="{ x:Static local:GrialShapesFont.ArrowLeft }" />
+		<Setter Property="TextColor" Value="{ DynamicResource MainMenuIconColor }" />
+		<Setter Property="VerticalTextAlignment" Value="Center" />
+		<Setter Property="FontSize" Value="{DynamicResource MainMenuChevronRightFontsize}" />
+		<Setter Property="HorizontalOptions" Value="Start" />
+	</Style>
+
+	<Style x:Key="RTLBadgeStyle" TargetType="Label">
+		<Setter Property="HorizontalOptions" Value="Start" />
+	</Style>
+
+	<Style x:Key="BrandNameOrnamentStyle" TargetType="BoxView" BaseResourceKey="BrandNameOrnamentStyle">
+		<Setter Property="HorizontalOptions" Value="End" />
+	</Style>
+	
+	<Style x:Key="ArtinaLoginEntryStyle" TargetType="Entry" BaseResourceKey="ArtinaLoginEntryStyle">
+		<Setter Property="HorizontalTextAlignment" Value="End" />
+	</Style>
+</ResourceDictionary>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="GrialRTLService.MainPage"
+	xmlns:rtl="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Rtl"
+	Title="{Binding WelcomeToGrialRTLServiceApp, Source={StaticResource uiTexts}}"
+	rtl:RtlProperties.Mirrored="{ DynamicResource Rtl }">
+	<!-- Welcome to Grial RTL Service App-->
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Priority="1"
+			x:Name="btnToggleRTL"
+			Text="RTL"
+		/>
+	</ContentPage.ToolbarItems>
+
+	<ContentPage.Content>
+		<StackLayout Padding="20">
+			<Button
+				x:Name="btnRequestFormPage"
+				Style="{ StaticResource PrimaryActionButtonStyle }"
+				Text="{Binding PageRequestForm, Source={StaticResource uiTexts}}" />
+
+			<Button
+				x:Name="btnRequestWelcomePage"
+				Style="{ StaticResource SecondaryActionButtonStyle }"
+				Text="Welcome Page"/>
+
+			<Button
+				x:Name="btnRequestNewsListPage"
+				Style="{ StaticResource SecondaryActionButtonStyle }"
+				Text="News List"/>
+
+			<Button
+				x:Name="btnRequestNewsDetailPage"
+				Style="{ StaticResource SecondaryActionButtonStyle }"
+				Text="News Detail Page"/>
+
+			<Button
+				x:Name="btnOfferCategoryListPage"
+				Style="{ StaticResource SecondaryActionButtonStyle }"
+				Text="Offer Category ListPage"/>
+
+			
+			<Button
+				x:Name="btnRequestThemePage"
+				Style="{ StaticResource GhostButtonStyle }"
+				Text="{Binding PageTheme, Source={StaticResource uiTexts}}" />
+
+		</StackLayout>
+	</ContentPage.Content>
+	
+</ContentPage>

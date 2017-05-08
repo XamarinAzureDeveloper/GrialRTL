@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+	xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+	xmlns:vm="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+	xmlns:rtl="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Rtl"
+
+	x:Class="GrialRTLService.Views.RequestFormPage"
+	Title="{Binding PageTitle}"
+	Icon="home_icon.png"
+	rtl:RtlProperties.Mirrored="{ DynamicResource Rtl }">
+
+	<ContentPage.BindingContext>
+		<vm:MaritalStatusChangeRequestVm />
+	</ContentPage.BindingContext>
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Priority="1"
+			x:Name="btnToggleRTL"
+			Text="RTL"
+		/>
+	</ContentPage.ToolbarItems>
+
+	<ContentPage.Content>
+
+		<ScrollView
+			Padding="20">
+
+			<StackLayout Spacing="30">
+				<!-- LATEST REQUIREMENTS -->
+				<AbsoluteLayout>
+					<Label
+						TextColor="{ DynamicResource BaseTextColor }"
+						Text="{ x:Static local:GrialShapesFont.QueryBuilder } " 
+						FontFamily="{ StaticResource GrialShapesFontFamily }" />
+					
+					<Label
+						Margin="20,0,0,0"
+						TextColor="{ DynamicResource BaseTextColor }"
+						Text=" Latest Requirements"  />
+				</AbsoluteLayout>
+
+				<!-- Readonly Entry -->
+				<Entry 
+					Style="{ DynamicResource EntryRTLOrLFTStyle }" 
+					HorizontalOptions="FillAndExpand" 
+					Text="{Binding ReadonlyEntryText}"
+					IsEnabled="false"/>
+
+				<StackLayout 
+					VerticalOptions="Start">
+					<!---EMAIL FIELD--> 
+					<!-- Type invalid email to see error-->
+					<Entry 
+						Placeholder="{Binding WriteInvalidEmailText}"
+						HorizontalOptions="FillAndExpand" 
+						Style="{ DynamicResource EntryRTLOrLFTStyle }">
+						<Entry.Behaviors>
+							<artina:EmailValidatorBehavior x:Name="emailValidator" />
+						</Entry.Behaviors>
+					</Entry>
+
+					<!--  Please enter a valid e-mail " -->
+					<Label 
+						Text="{Binding InvalidEmailMessage}"	
+						IsVisible="false"
+						Style="{DynamicResource ValidationEntryErrorStyle}">
+
+						<Label.Triggers>
+							<DataTrigger TargetType="Label"
+								Binding="{Binding Source={x:Reference emailValidator}, Path=IsValid}"
+								Value="false">
+								<Setter Property="IsVisible" Value="true" />
+							</DataTrigger> 
+						</Label.Triggers>
+					</Label>
+				</StackLayout>
+
+				<Label
+					Style="{ DynamicResource LabelRTLOrLFTStyle }"
+					FontSize="16" TextColor="Gray"
+					HorizontalTextAlignment="Start"
+					Text="{Binding DatePickerLabel}" />
+				<DatePicker Style="{ DynamicResource DatePickerRTLOrLFTStyle }">
+					<DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+				</DatePicker>
+
+				<BoxView Style="{ DynamicResource ThemeShowCaseHorizontalRuleStyle }" />
+
+
+
+
+				
+				<Label
+					Style="{ DynamicResource DateLabelStyle}"
+					Text="Sunday, April 8, 2017 "
+					Margin="0,0,0,20"/>
+
+				<!-- MARITAL STATUS -->
+				<StackLayout>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="auto" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<Label
+							Grid.Column="0"
+							Style="{ DynamicResource LabelRTLOrLFTStyle }"
+							FontSize="16" TextColor="Gray"
+							Text="{Binding NewMaritalStatusLabel}" HorizontalTextAlignment="Start" />
+						<Label Grid.Column="1"
+									 Style="{ DynamicResource LabelRTLOrLFTStyle }"
+									 Text=" *" TextColor="Red" />
+					</Grid>
+
+					<!-- ******** note: span.Text is not bindable *********** -->
+					<!--<Label
+						Style="{ DynamicResource LabelRTLOrLFTStyle }"
+						FontSize="16">
+						<Label.FormattedText>
+							<FormattedString>
+								<Span Text="" ForegroundColor="Gray" />
+								<Span Text=" *" ForegroundColor="Red" />
+							</FormattedString>
+						</Label.FormattedText>
+					</Label>-->
+
+
+					<Picker
+						x:Name="statusPicker"
+						HorizontalOptions="FillAndExpand"
+						Style="{ DynamicResource DatePickerRTLOrLFTStyle }">
+						<Picker.Items>
+							<x:String>1</x:String>
+							<x:String>2</x:String>
+							<x:String>3</x:String>
+						</Picker.Items>
+					</Picker>
+				</StackLayout>
+
+
+				<!-- REQUEST REASON -->
+				<StackLayout>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="auto" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<Label
+							Style="{ DynamicResource LabelRTLOrLFTStyle }"
+							FontSize="16" Text="{Binding RequestReasonLabel}"
+							TextColor="Gray" />
+						<Label Grid.Column="1"
+									 Text=" *"
+									 Style="{ DynamicResource LabelRTLOrLFTStyle }"
+									 TextColor="Red" />
+					</Grid>
+
+					<!-- ******** note: span.Text is not bindable *********** -->
+					<!--<Label
+						Style="{ DynamicResource LabelRTLOrLFTStyle }"
+						FontSize="16" >
+						<Label.FormattedText>
+							<FormattedString>
+								<Span Text="" ForegroundColor="Gray" />
+								<Span Text=" *" ForegroundColor="Red" />
+							</FormattedString>
+						</Label.FormattedText>
+					</Label>-->
+					<Entry Style="{ DynamicResource EntryRTLOrLFTStyle }" HorizontalOptions="FillAndExpand"/>
+
+				</StackLayout>
+
+				<!-- SELECT TIME -->
+				<StackLayout>
+
+					<Grid RowSpacing="0" ColumnSpacing="20">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="auto" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							
+							<Label Grid.Column="0"
+										 Style="{ DynamicResource LabelRTLOrLFTStyle }"
+										 FontSize="16" Text="{Binding SelectTimeLabel}"
+										 TextColor="Gray" />
+							<Label Grid.Column="1"
+										 Style="{ DynamicResource LabelRTLOrLFTStyle }"
+										 Text=" *" TextColor="Red" />
+						</Grid>
+
+						<!-- ******** note: span.Text is not bindable *********** -->
+						<!--<Label
+							Style="{ DynamicResource LabelRTLOrLFTStyle }"
+							FontSize="16"
+							Grid.Row="0"
+							Grid.Column="0">
+							<Label.FormattedText>
+								<FormattedString>
+									<Span Text="" ForegroundColor="Gray" />
+									<Span Text=" *" ForegroundColor="Red" />
+								</FormattedString>
+							</Label.FormattedText>
+						</Label>-->
+
+						<TimePicker
+							Grid.Row="1"
+							Grid.Column="0"
+							HorizontalOptions="FillAndExpand"
+							Style="{ DynamicResource DatePickerRTLOrLFTStyle }"
+							Time="{Binding RequestTime}"
+					/>
+
+						<Label
+							Grid.Row="0"
+							Grid.Column="1"
+							Style="{ DynamicResource LabelRTLOrLFTStyle }"
+							FontSize="16"
+							Text="{Binding AttachmentLabel }" />
+
+						<Button
+							Grid.Row="1"
+							Grid.Column="1"
+							Style="{ DynamicResource RoundedButtonStyle }"
+							BackgroundColor="#CCCCCC"
+							Clicked="OnOpenAttachmentOptionsPopup"
+						/>
+
+
+						<Label
+							Grid.Row="1"
+							Grid.Column="1"
+							Rotation="90"
+							Text="{ x:Static local:GrialShapesFont.AttachFile }"
+							Style="{StaticResource FontIcon}"
+							FontSize="20"
+							InputTransparent="true"
+							HorizontalTextAlignment="Center"
+							TextColor="Black"
+							VerticalOptions="Center"
+							HorizontalOptions="Center"/>
+
+					</Grid>
+				</StackLayout>
+
+				<!-- COMMENTS -->
+				<StackLayout>
+					<Label
+						Style="{ DynamicResource LabelRTLOrLFTStyle }"
+						FontSize="16"
+						TextColor="Gray"
+						Text="{Binding CommentsLabel }" />
+					<Grid
+						BackgroundColor="#EBEBEB"
+						Padding="1"
+						HeightRequest="110">
+						<Editor
+							HorizontalOptions="FillAndExpand"
+							Style="{ DynamicResource EditorRTLOrLFTStyle }"
+					/>
+					</Grid>
+				</StackLayout>
+
+
+				<!-- BUTTONS -->
+				<Grid ColumnSpacing="20">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="5*"/>
+						<ColumnDefinition Width="5*"/>
+					</Grid.ColumnDefinitions>
+
+					<Button
+						Grid.Column="0"
+						Style="{ StaticResource GhostButtonStyle }"
+						Text="{Binding CancelButton }"/>
+
+					<Button
+						Grid.Column="1"
+						Style="{ StaticResource PrimaryActionButtonStyle }"
+						Text="{Binding SubmitButton }"/>
+				</Grid>
+
+			</StackLayout>
+
+		</ScrollView>
+
+	</ContentPage.Content>
+
+</ContentPage>

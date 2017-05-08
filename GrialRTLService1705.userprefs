@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{45DA7B47-C579-4BC1-B1E5-97EEA0C669CD}|Default">
+  <MonoDevelop.Ide.ItemProperties.GrialRTLService.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.08FD6CAE-2D56-498D-A42E-4CADE5EFF4BF" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GrialRTLService/ViewModels/ArticleViewModel.cs">
+    <Files>
+      <File FileName="GrialRTLService/Views/Templates/CategoriesListWithIconsItemTemplate.xaml" Line="8" Column="76" />
+      <File FileName="GrialRTLService/Views/NewsListPage.xaml" Line="26" Column="17" />
+      <File FileName="GrialRTLService/ViewModels/ArticleViewModel.cs" Line="13" Column="1" />
+      <File FileName="GrialRTLService/Views/NewsListPage.xaml.cs" Line="9" Column="26" NotebookId="1" />
+      <File FileName="GrialRTLService/Views/Common/Badge.xaml.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="GrialRTLService/Views/Common/Badge.xaml" Line="29" Column="6" NotebookId="1" />
+      <File FileName="GrialRTLService/Views/OfferCategoryListPage.xaml" Line="45" Column="50" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node />
+          <Node name="GrialRTLService1705" expanded="True">
+            <Node name="GrialRTLService" expanded="True">
+              <Node name="Helpers" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="ArticleViewModel.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Common" expanded="True" />
+                <Node name="Templates" expanded="True">
+                  <Node name="CategoriesListWithIconsItemTemplate.xaml" expanded="True" />
+                </Node>
+                <Node name="MainPage.xaml" expanded="True" />
+                <Node name="NewsDetailPage.xaml" expanded="True" />
+                <Node name="NewsListPage.xaml" expanded="True" />
+                <Node name="RequestFormPage.xaml" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GrialRTLService.Droid PreferredExecutionTarget="Android.Leon 2 (KitKat)" />
+</Properties>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		
+	xmlns:local="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+	xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+	xmlns:vm="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+	xmlns:rtl="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Rtl"
+		
+	x:Class="GrialRTLService.OfferCategoryListPage"
+	Title="Offer Category List Page"
+	rtl:RtlProperties.Mirrored="{ DynamicResource Rtl }">
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Priority="1"
+			x:Name="btnToggleRTL"
+			Text="RTL"
+		/>
+	</ContentPage.ToolbarItems>
+	
+	<ContentPage.Content>
+		<ListView 
+			ItemsSource="{ Binding }"
+			SeparatorVisibility="Default"
+			SeparatorColor="#DFDFDF"
+			HasUnevenRows="false"
+			RowHeight="60">
+	
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<local:CategoriesListWithIconsItemTemplate/>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

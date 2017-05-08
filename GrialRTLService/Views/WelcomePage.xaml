@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+	xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+	xmlns:vm="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+	xmlns:rtl="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Rtl"
+	xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+	x:Class="GrialRTLService.WelcomePage"
+	rtl:RtlProperties.Mirrored="{ DynamicResource Rtl }">
+	
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Priority="1"
+			x:Name="btnToggleRTL"
+			Text="RTL"
+		/>
+	</ContentPage.ToolbarItems>
+	
+	
+	<ContentPage.Content>
+		<!-- MAIN CONTAINER-->
+	<Grid 
+		HorizontalOptions="FillAndExpand" 
+		VerticalOptions="FillAndExpand">
+
+		<!---BACKGROUND IMAGE -->
+		<ffimageloading:CachedImage 
+			FadeAnimationEnabled="false"
+			Style="{DynamicResource WelcomeBackgroundImage}"/>
+
+		<Grid 
+			Padding="20">
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+
+			
+			<Grid 
+				Grid.Row="0"
+				ColumnSpacing="0"
+				Padding="0"
+				HorizontalOptions="FillAndExpand">
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+
+				
+				<!--LOGO-->
+				<Image 
+					Margin="10"
+					Source="{ StaticResource BrandImage }"
+					Grid.Column="0"
+					HeightRequest="80"
+					WidthRequest="80"
+					VerticalOptions="Center"/>
+			</Grid>
+
+			<!--CLAIM TEXT-->
+			<StackLayout 
+				Grid.Row="1"
+				Spacing="10"
+				Orientation="Vertical"
+				VerticalOptions="Center"
+				TranslationY="-20"
+				Padding="{ artina:OnOrientationDouble
+					Default=10,
+					PortraitTablet=10,
+					LandscapeTablet=10 }">
+				<Label
+					LineBreakMode="WordWrap"
+					Text="Human Resource Departament"
+					TextColor="{ DynamicResource OverImageTextColor }"
+					VerticalTextAlignment="Center"
+					FontAttributes="Bold">
+		                <Label.FontSize> 
+							<OnIdiom x:TypeArguments="x:Double"
+							     Phone="22"
+							     Tablet="32"/>
+						</Label.FontSize>
+				</Label>
+				<Label
+					LineBreakMode="WordWrap"
+					Text="Dreams do not work, unless you do."
+					TextColor="{ DynamicResource OverImageTextColor }"
+					VerticalTextAlignment="Center">
+		                <Label.FontSize> 
+							<OnIdiom x:TypeArguments="x:Double"
+							     Phone="15"
+							     Tablet="25"/>
+						</Label.FontSize>
+				</Label>
+
+
+				<!-- ACCENT LINE -->
+				<BoxView 
+					Style="{DynamicResource BrandNameOrnamentStyle}" 
+					Margin="0,10,0,0"/>
+				
+			</StackLayout>
+
+			<!---FIELDS CONTAINER-->
+			<Grid
+				Grid.Row="2"
+				Padding="10"
+				ColumnSpacing="0" 
+				RowSpacing="0" 
+				VerticalOptions="EndAndExpand"
+				HeightRequest="130"
+				Margin="0,0,0,20">
+
+				<!---EMAIL FIELD--> 
+				<Entry 
+					Grid.Row="0"
+					Placeholder="Username"
+					TextColor="{ DynamicResource OverImageTextColor }"
+					Style="{DynamicResource ArtinaLoginEntryStyle}" 
+					VerticalOptions="EndAndExpand"/>
+			
+
+				<!---PASSWORD FIELD-->
+				<Entry 
+					Grid.Row="1"
+					Placeholder="Password"
+					IsPassword="true"
+					Style="{DynamicResource ArtinaLoginEntryStyle}" 
+					VerticalOptions="EndAndExpand" />
+
+			</Grid>
+				
+			<!--BUTTONS-->
+			<StackLayout
+				Grid.Row="3"
+				VerticalOptions="End" 
+				HorizontalOptions="FillAndExpand" 
+				Spacing="10">
+			
+				<artina:Button 
+					Style="{DynamicResource PrimaryActionButtonStyle}" 
+					Text="Log In"
+					VerticalOptions="EndAndExpand"
+					WidthRequest="{ artina:OnOrientationDouble
+						LandscapeTablet=600 }"
+					HorizontalOptions="{ artina:OnOrientationLayoutOptions
+						PortraitPhone=Fill,
+						LandscapePhone=Fill,
+						PortraitTablet=Fill,
+						LandscapeTablet=Center }"/>
+				
+				<artina:Button 
+					Style="{DynamicResource GhostButtonStyle}" 
+					TextColor="White"
+					Text="See our walkthrough" 
+					VerticalOptions="EndAndExpand"
+					WidthRequest="{ artina:OnOrientationDouble
+						LandscapeTablet=600 }"
+					HorizontalOptions="{ artina:OnOrientationLayoutOptions
+						PortraitPhone=Fill,
+						LandscapePhone=Fill,
+						PortraitTablet=Fill,
+						LandscapeTablet=Center }"/>
+			
+			</StackLayout>
+
+		</Grid>
+	</Grid>
+
+		
+	</ContentPage.Content>
+</ContentPage>

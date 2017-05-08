@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="GrialRTLService.CategoriesListWithIconsItemTemplate"
+
+		xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+		xmlns:commonViews="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+		xmlns:local="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+		xmlns:rtl="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Rtl">
+
+	<ContentView.Content>
+		<StackLayout 
+			rtl:RtlProperties.Mirrored="{ DynamicResource Rtl }"
+			Spacing="0" 
+			Padding="0" 
+			HorizontalOptions="Fill" >
+
+			<Grid
+				ColumnSpacing="20"
+				Padding="0, 0, 0, 0" 
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand" >
+
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="10" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="20" />
+					</Grid.ColumnDefinitions>
+
+				<BoxView 
+					BackgroundColor="{ Binding BackgroundColor }" 
+					WidthRequest="10"/>
+
+				<Label 
+					Grid.Column="1"
+					Text="{ Binding Icon }"
+					FontSize="30" 
+					Style="{ StaticResource FontIcon }"
+					TextColor="{ Binding BackgroundColor }" 
+					HorizontalOptions="Start"
+					WidthRequest="30"
+					VerticalTextAlignment="Center" 
+					HorizontalTextAlignment="Center"
+				/>
+
+				<Label 
+					Grid.Column="2"
+					Text="{ Binding Name }" 
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="Center" 
+				/>
+
+				<commonViews:Badge
+					Grid.Column="3"
+					BadgeText="{ Binding SamplesList.Count }"
+					BadgeTextColor="#FFF"
+					BadgeBackgroundColor="#55000000"
+					VerticalOptions="Center"
+					TranslationX="8"
+					TranslationY="2"
+					Style="{ DynamicResource RTLBadgeStyle }"
+				/>
+
+				<Label 
+					Grid.Column="4"
+					WidthRequest="20"
+					HorizontalOptions="End"
+					Style="{ DynamicResource MainMenuRTLChevronStyle }"
+					VerticalOptions="Center"
+					TextColor="{ Binding BackgroundColor }"/>
+			
+			</Grid>
+			
+		</StackLayout>
+		
+	</ContentView.Content>
+</ContentView>

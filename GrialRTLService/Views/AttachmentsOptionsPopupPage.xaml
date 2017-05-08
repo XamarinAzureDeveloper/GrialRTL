@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<popups:PopupPage
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+	xmlns:effects="clr-namespace:UXDivers.Effects;assembly=UXDivers.Effects"
+	xmlns:vm="clr-namespace:GrialRTLService;assembly=GrialRTLService"
+	x:Class="GrialRTLService.AttachmentsOptionsPopupPage">
+
+	<StackLayout 
+		VerticalOptions="Center" 
+		HorizontalOptions="FillAndExpand" 
+		Style="{ StaticResource PopupContentStyle }">
+
+		<Grid
+			effects:Effects.CornerRadius="6">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="130" />
+			</Grid.RowDefinitions>
+	      <ListView 
+				BackgroundColor="White"
+				VerticalOptions="Center"
+					ItemsSource="{Binding AttachementOptions}"
+				>
+			<!--<ListView.ItemsSource>
+				<x:Array x:Key="stringArray" Type="{x:Type x:String}">
+			    	<x:String>Attachment</x:String>
+					<x:String>Use Camera</x:String>
+					<x:String>Pick From Gallery</x:String>
+				</x:Array>
+			</ListView.ItemsSource>-->
+					
+	        <ListView.ItemTemplate>
+	          <DataTemplate>
+				<ViewCell>
+					<Label
+						HorizontalTextAlignment="Center"
+						VerticalTextAlignment="Center"
+						TextColor="Gray"  
+						Text="{Binding .}"/>
+				</ViewCell>
+	          </DataTemplate>
+	        </ListView.ItemTemplate>
+	      </ListView>
+			
+    	</Grid>
+  </StackLayout>
+</popups:PopupPage>
+
