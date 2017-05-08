@@ -1,6 +1,13 @@
-﻿<Properties StartupConfiguration="{45DA7B47-C579-4BC1-B1E5-97EEA0C669CD}|Default">
+﻿<Properties StartupConfiguration="{B6C3195C-0075-436E-826B-FEF49284DD32}|Default">
   <MonoDevelop.Ide.ItemProperties.GrialRTLService.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.29414887-6D14-48F6-B169-7059A4CE0EBC" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GrialRTLService/ViewModels/PostsViewModel.cs">
+    <Files>
+      <File FileName="GrialRTLService/NetworkManager/APIManager.cs" Line="27" Column="5" />
+      <File FileName="GrialRTLService/Views/NewsListPage.xaml" Line="1" Column="1" />
+      <File FileName="GrialRTLService/Views/NewsListPage.xaml.cs" Line="18" Column="32" />
+      <File FileName="GrialRTLService/ViewModels/PostsViewModel.cs" Line="12" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
