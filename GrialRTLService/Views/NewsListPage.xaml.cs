@@ -72,6 +72,9 @@ namespace GrialRTLService
 			centerIndicator.IsVisible = false;
 			isLoading = false;
 
+			if (result == null) result = "";
+			if (result_en == null) result_en = "";
+
 			var json = Newtonsoft.Json.Linq.JObject.Parse(result.ToString());
 			var newsList = JsonConvert.SerializeObject(json["PublicNewsList"]);
 			var count = JsonConvert.SerializeObject(json["Total"]);

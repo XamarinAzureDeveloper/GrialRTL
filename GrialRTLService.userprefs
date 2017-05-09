@@ -1,13 +1,14 @@
-﻿<Properties StartupConfiguration="{45DA7B47-C579-4BC1-B1E5-97EEA0C669CD}|Default">
+﻿<Properties StartupConfiguration="{B6C3195C-0075-436E-826B-FEF49284DD32}|Default">
   <MonoDevelop.Ide.ItemProperties.GrialRTLService.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.29414887-6D14-48F6-B169-7059A4CE0EBC" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GrialRTLService/NetworkManager/APIManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GrialRTLService/Views/Templates/ArticleClassicViewItemTemplate.xaml">
     <Files>
-      <File FileName="GrialRTLService/Views/NewsListPage.xaml" Line="41" Column="65" />
-      <File FileName="GrialRTLService/Views/NewsListPage.xaml.cs" Line="70" Column="46" />
+      <File FileName="GrialRTLService/Views/NewsListPage.xaml" Line="29" Column="113" />
+      <File FileName="GrialRTLService/Views/NewsListPage.xaml.cs" Line="89" Column="31" />
       <File FileName="GrialRTLService/Views/Theme/ThemePage.xaml" Line="31" Column="1" />
       <File FileName="GrialRTLService/Views/Theme/ThemePage.xaml.cs" Line="1" Column="1" />
       <File FileName="GrialRTLService.iOS/Main.cs" Line="12" Column="1" />
-      <File FileName="GrialRTLService/NetworkManager/APIManager.cs" Line="59" Column="29" />
+      <File FileName="GrialRTLService/NetworkManager/APIManager.cs" Line="61" Column="116" />
+      <File FileName="GrialRTLService/Views/Templates/ArticleClassicViewItemTemplate.xaml" Line="34" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

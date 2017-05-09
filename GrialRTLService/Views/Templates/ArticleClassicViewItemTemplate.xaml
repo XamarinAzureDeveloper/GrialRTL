@@ -36,8 +36,9 @@
 			Grid.RowSpan="3"
 			FadeAnimationEnabled="true"
 			Source="{ Binding image }" 
-			Aspect="AspectFill"
-			HeightRequest="100" />
+			Aspect="AspectFit"
+			HeightRequest="100"
+			WidthRequest="90" />
 
 		<Label 
 			Grid.Row="0"
