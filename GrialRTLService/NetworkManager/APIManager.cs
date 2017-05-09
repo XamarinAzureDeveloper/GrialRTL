@@ -56,9 +56,9 @@ namespace GrialRTLService
 		//	return null;
 		//}
 
-		public async Task<Object> GetNewsList()
+		public async Task<Object> GetNewsList(string lang, int page_num)
 		{
-			var uri = new Uri(string.Format(Constant.BASE_URL + "PublicNews/?language=en&page_num=1"));
+			var uri = new Uri(string.Format(Constant.BASE_URL + "PublicNews/?language=" + lang + "&page_num=" + page_num) + "&page_limit=10");
 
 			try
 			{

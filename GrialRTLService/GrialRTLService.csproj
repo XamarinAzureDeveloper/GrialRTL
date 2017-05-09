@@ -127,6 +127,7 @@
     <Compile Include="Models\SamplesDefinition.cs" />
     <Compile Include="NetworkManager\APIManager.cs" />
     <Compile Include="NetworkManager\Constant.cs" />
+    <Compile Include="Models\News.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

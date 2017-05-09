@@ -21,23 +21,33 @@
 	</ContentPage.ToolbarItems>
 	
 	<ContentPage.Content>
+		<RelativeLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<ListView 
+				VerticalOptions="FillAndExpand"
+				HorizontalOptions="FillAndExpand"
+				x:Name = "newsListview"
+				CachingStrategy="RecycleElement"
+				SeparatorVisibility="None" 
 
-		<ListView 
-			CachingStrategy="RecycleElement"
-			SeparatorVisibility="None" 
-			ItemsSource="{ Binding PostsList }"
+				HasUnevenRows="false"
+				RowHeight="140">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<local:ArticleClassicViewItemTemplate 
+								Padding="{DynamicResource MainWrapperPadding}"/>
+							</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<StackLayout x:Name="centerIndicator" IsVisible="false" InputTransparent="false"
+						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.1}"
+						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.1}"
+						RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.45,Constant=0}"
+				    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.45,Constant=0}">
 
-			HasUnevenRows="false"
-			RowHeight="140">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<local:ArticleClassicViewItemTemplate 
-							Padding="{DynamicResource MainWrapperPadding}"/>
-						</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-
+				<ActivityIndicator IsRunning="true" VerticalOptions="Center" HorizontalOptions="Center"/>
+			</StackLayout>
+		</RelativeLayout>
 	</ContentPage.Content>
 </ContentPage>
