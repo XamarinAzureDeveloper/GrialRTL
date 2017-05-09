@@ -53,7 +53,7 @@ namespace GrialRTLService
 				if(isLoading || _listOfItems.Count == 0)
 					return;
 
-				if(e.Item == _listOfItems[_listOfItems.Count - 1])
+				if(e.Item == _listOfItems[_listOfItems.Count - 1] || e.Item == _listOfItems_en[_listOfItems.Count - 1])
 				{
 					page_num++;
 					getNews();

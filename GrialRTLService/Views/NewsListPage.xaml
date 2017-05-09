@@ -22,15 +22,11 @@
 	
 	<ContentPage.Content>
 		<RelativeLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-			<ListView 
-				VerticalOptions="FillAndExpand"
-				HorizontalOptions="FillAndExpand"
-				x:Name = "newsListview"
-				CachingStrategy="RecycleElement"
-				SeparatorVisibility="None" 
-
-				HasUnevenRows="false"
-				RowHeight="140">
+			<ListView x:Name = "newsListview" CachingStrategy="RecycleElement" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="140"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+				RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+		    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
